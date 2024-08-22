@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import {  Route, Routes,useLocation } from 'react-router-dom';
+import Project from './container/Project';
+import Home from './container/Home';
+import Skill from './container/Skill';
+import About from './container/About';
+import Resume from './container/Resume';
+import Contact from './container/Contact';
+import Navbar from './component/Navbar'
+// import Particles from 'react-tsparticles';
+// import { loadFull } from 'tsparticles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+   {/* Navbar */}
+   
+   <Navbar/>
+
+
+<div className='APP__main-page-container'>
+
+<Routes>
+       {/* this is become default route */}
+      <Route index path="/" element={<Home/>}/>
+      <Route path='about' element={<About/>}/>
+      <Route path='contact' element={<Contact/>}/>
+      <Route path='skill' element={<Skill/>}/>
+      <Route path='Project' element={<Project/>}/>
+      <Route path='Resume' element={<Resume/>} />
+    </Routes>
     </div>
+    </div>
+    
   );
 }
 
