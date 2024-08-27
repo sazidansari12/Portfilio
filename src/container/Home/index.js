@@ -37,7 +37,11 @@ const handleNavigateTocontactpage = ()=>{
   }}
   >
   <div className='home-contact-me'>
-    <button onClick={handleNavigateTocontactpage}> Hire Me</button>
+    <button onClick={handleNavigateTocontactpage}>
+      <h3>
+        Hire Me
+        </h3> 
+        </button>
    </div>
   </Animate>
    

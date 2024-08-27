@@ -4,7 +4,7 @@
 
 :root{
   --yellow-theme-background-color : #1d1d1d;
-  --yellow-theme-main-color : #ffdd40;
+  --yellow-theme-main-color : #ffff;
   --yellow-theme-sub-text-color : #ffffff;
   --yellow-theme-nav-background-color : #181818;
 }
@@ -20,11 +20,18 @@ html{
   height: 100%;
 }
 body{
-  background-color:  var(--yellow-theme-background-color);
+ 
   height: 100%;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style:normal;
+  background: rgb(81, 64, 192);
+background: -moz-linear-gradient(102deg, rgba(13,6,58,1) 33%, rgba(151,72,233,1) 23%, rgb(13,6,58,1) 100%);
+background: -webkit-linear-gradient(102deg, rgba(13,6,58,1) 33%, rgba(151,72,233,1) 23%, rgb(13,6,58,1) 100%);
+background: linear-gradient(102deg, rgba(13,6,58,1) 33%, rgb(103, 36, 175) 23%, rgb(13,6,58,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d063a",endColorstr="#415824",GradientType=1);
+
+  
 }
 #root{
   height: 100%;

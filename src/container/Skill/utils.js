@@ -36,6 +36,6 @@ export const  skillData = [
         ],
     },
     {
-        label : "feture skill "
+        label : "feature skill "
     }
 ]

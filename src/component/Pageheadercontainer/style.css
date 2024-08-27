@@ -1,7 +1,7 @@
 .wrapper{
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     border-bottom: 1px  dashed var(--yellow-theme-main-color);
 }
 .wrapper h2{
@@ -10,12 +10,13 @@
     letter-spacing: 1.5px;
     line-height: 1rem;
     text-transform: capitalize;
-    color: var(--yellow-theme-main-color);
+    /* color: var(--yellow-theme-main-color); */
+    color: white;
     display: flex;
     flex-grow: 1;
 }
 span{
     svg{
-        color:var(--yellow-theme-main-color) ;
+        color:white ;
     }
 }

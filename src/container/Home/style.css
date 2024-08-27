@@ -6,10 +6,10 @@
     align-items: center;
     align-content: center;
     flex-direction: column;
-    background: rgb(13,6,58);
-background: -moz-linear-gradient(102deg, rgba(13,6,58,1) 0%, rgba(151,72,233,1) 63%, rgba(65,88,36,1) 100%);
-background: -webkit-linear-gradient(102deg, rgba(13,6,58,1) 0%, rgba(151,72,233,1) 63%, rgba(65,88,36,1) 100%);
-background: linear-gradient(102deg, rgba(13,6,58,1) 0%, rgba(151,72,233,1) 63%, rgba(65,88,36,1) 100%);
+    background: rgb(81, 64, 192);
+background: -moz-linear-gradient(102deg, rgba(13,6,58,1) 33%, rgba(151,72,233,1) 23%, rgb(13,6,58,1) 100%);
+background: -webkit-linear-gradient(102deg, rgba(13,6,58,1) 33%, rgba(151,72,233,1) 23%, rgb(13,6,58,1) 100%);
+background: linear-gradient(102deg, rgba(13,6,58,1) 33%, rgb(103, 36, 175) 23%, rgb(13,6,58,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d063a",endColorstr="#415824",GradientType=1);
 
 }
@@ -38,19 +38,19 @@ h1{
   cursor: pointer;
   padding: 10px 65px;
   font-size: 2rem;
-  background: white;
-  color: black;
-  border: 1.5px solid var(--yellow-theme-main-color);
+  background: transparent;
+  font-weight: 900;
+  color: rgb(246, 242, 242);
+  border: 2.5px solid rgb(235, 233, 237);
   border-radius: 4px;
   font-weight: 400;
 }  
 .home-contact-me button:hover{
   /* background: rgb(13,6,58); */
-  background: -moz-linear-gradient(102deg, rgb(104, 90, 195) 0%, rgba(151,72,233,1) 63%);
-  background: -webkit-linear-gradient(102deg, rgb(183, 174, 241) 0%, rgba(151,72,233,1) 63% );
-  background: linear-gradient(102deg, rgb(198, 192, 238) 0%, rgba(151,72,233,1) 63%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d063a",endColorstr="#415824",GradientType=1);
-  color: white;
+  background: rgb(242, 241, 244);
+
+  color: rgb(91, 25, 222);
+  border: 2px solid rgb(255, 255, 255);
 
 }
 

@@ -4,6 +4,7 @@ import { BsInfoCircleFill } from 'react-icons/bs';
 import { Animate } from 'react-simple-animate';
 import { DiApple ,DiAndroid} from 'react-icons/di';
 import { FaDev, FaDatabase } from 'react-icons/fa';
+import {TypeAnimation} from "react-type-animation"
 // import { Value } from 'sass';
 import './style.css'
 
@@ -56,8 +57,33 @@ function About() {
   }}
   >
    
-     <h3>Front End developer</h3>
-     <p>{jobsummery}</p>
+     {/* <h3>Front End developer</h3> */}
+     <div
+     className='typedAnimate'>
+
+     <TypeAnimation
+  sequence={[
+    
+    'FrontEnd', //  Continuing previous Text
+    500,
+    'FrontEnd Developer',
+    500,
+    'FrontEnd',
+    500,
+    'DSA ',
+    500,
+    'DSA with Java',
+    500,
+    'DSA',
+    500,
+    '',
+    500,
+  ]}
+  style={{ fontSize: '2em' }}
+  repeat={Infinity}
+/>
+  </div>
+     <p className='job-summary'>{jobsummery}</p>
 
 </Animate>
 <Animate
@@ -71,15 +97,16 @@ function About() {
     transform : 'translatex(0px)',
   }}
   >
-<h3 className='personalinformationHeaderText'>personal information</h3>
-<ul>
+<h3 className='personalinformationHeaderText'>Personal information</h3>
+<ul className='personal-list'>
   {
     personDetail.map((item , i)=>(
       <li key={i}>
-        <span className='title'>{item.label}</span>
-        <span className='value'>{item.value}</span>
+          <span className='title'>{item.label}</span>
+        <span className='value'>{item.value}</span> 
 
       </li>
+     
     ))
   }
 </ul>
@@ -88,16 +115,16 @@ function About() {
         <div className='about-content__service__wrapper'>
           <div className='about-content__service__wrapper__inner-content'>
           <div className='fadev'>
-            <FaDev size={60} color="var(--yellow-theme-main-color)"/>
+            <FaDev size={60} color={"white"}/>
           </div>
           <div className='Diandroid'>
-          <DiAndroid size={60} color="var(--yellow-theme-main-color)"/>
+          <DiAndroid size={60} color="white"/>
           </div>
           <div className='fadatabase'>
-          <FaDatabase size={60} color="var(--yellow-theme-main-color)"/>
+          <FaDatabase size={60} color="white"/>
           </div>
           <div className='diapple'>
-          < DiApple size={60} color="var(--yellow-theme-main-color)"/>
+          < DiApple size={60} color="white"/>
           </div>
         </div>
           </div>

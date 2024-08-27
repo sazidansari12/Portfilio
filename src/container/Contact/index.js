@@ -4,18 +4,20 @@ import { BsInfoCircleFill } from "react-icons/bs";
 import { Animate } from "react-simple-animate";
 import './style.css'
 import { MdTextRotateVertical } from "react-icons/md";
+import axios from "axios";
+import { baseURL } from "../../utils/base";
 
 function Contact() {
 
 
-const[FomeData, setformdata] = useState({ firstName : "", LastName: "", email : "", comment : ""})
+const[formData, setformdata] = useState({ firstName : "", LastName: "", email : "", comment : ""})
 
-console.log(FomeData)
+console.log(formData)
 function changehandler(event){
   // const {name ,value,type,comment} = event.target;
- setformdata(prevFomeData =>{
+ setformdata(prevformData =>{
   return{
-    ...prevFomeData,
+    ...prevformData,
   [event.target.name]  : event.target.value
   }
  })
@@ -23,8 +25,23 @@ function changehandler(event){
 }
 function submitHandler(event){
   event.preventDefault()
- console.log("finiallly")
- console.log(FomeData);
+  const payload = {
+    firstName:formData.firstName,
+    lastName:formData.LastName,
+    email:formData.email,
+    description:formData.comment
+  }
+
+  axios
+  .post(`${baseURL}/contactDetails`,payload)
+  .then((res)=>{
+    console.log("details send successfully");
+  })
+  .catch((error)=>{
+    console.log("error in axios catch");
+  })
+  //  console.log("finiallly")
+//  console.log(payload);
 
 }
 
@@ -69,23 +86,23 @@ function submitHandler(event){
             <div className="contact__container__form__controlwrapper">
               <div >
               <label htmlFor="name"  className="namelabel">Firstname</label>
-                <input type="text" name="firstName" onChange={changehandler}  value={FomeData.firstName} id="name" className="inputname"/>
+                <input type="text" name="firstName" onChange={changehandler}  value={formData.firstName} id="name" className="inputname"/>
                
               </div>
               <div >
               <label htmlFor="name"  className="namelabel">Lastname</label>
-                <input type="text" name="LastName" onChange={changehandler}  value={FomeData.LastName} id="name" className="inputname"/>
+                <input type="text" name="LastName" onChange={changehandler}  value={formData.LastName} id="name" className="inputname"/>
                
               </div>
               <div>
               <label htmlFor="email" className="emaillabel">Email</label>
-                <input type="email" name="email" className="inputemail"  onChange={changehandler}  value={FomeData.email}  id="email"/>
+                <input type="email" name="email" className="inputemail"  onChange={changehandler}  value={formData.email}  id="email"/>
                
               </div>
               <br />
               {/* <div>
               <label htmlFor="email" className="emaillabel">Email</label>
-                <input type="email" name="email" className="inputemail"  onChange={changehandler}  value={FomeData.email}  id="email"/>
+                <input type="email" name="email" className="inputemail"  onChange={changehandler}  value={formData.email}  id="email"/>
                
               </div> */}
               <div >
@@ -97,7 +114,7 @@ function submitHandler(event){
                 onChange={changehandler}
                 name="comment"
                 required
-                value={FomeData.comment}
+                value={formData.comment}
                   className="inputdescription"
                   type={"text"}
                   rows={5}
@@ -106,7 +123,7 @@ function submitHandler(event){
                 
               </div>
             </div>
-            <button>Submit</button>
+            <button className="submit-btn">Submit</button>
           </div>
           </form>
         </Animate>

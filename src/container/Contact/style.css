@@ -5,6 +5,7 @@
     color: var(--yellow-theme-main-color);
     display: inline-block;
     font-size: 22px;
+
     line-height: 1rem;
     letter-spacing: 0.5px;
     position: relative;
@@ -130,6 +131,13 @@ button{
 button:hover{
     color: black;
     background: var(--yellow-theme-main-color);
+}
+.submit-btn{
+    position: absolute;
+    /* right: 50%; */
+    bottom: 50%;
+    left: 67%;
+    width: fit-content;
 }
 @media screen and (max-width: 768px){
     .contact__container__form{
