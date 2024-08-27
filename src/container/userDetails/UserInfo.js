@@ -30,6 +30,13 @@ const UserInfo = () => {
 
 
     <div className='flex-column'>
+
+      {
+        userData.length <= 0 &&
+
+        <p> No User Data Yet</p>
+        
+      }
        
        {
 
@@ -69,9 +76,9 @@ const UserInfo = () => {
         
 
        
-       {/* <button className="getDetails" onClick={handleData}>
+       <button className="getDetails" onClick={handleData}>
              Get UserDetails
-       </button> */}
+       </button>
     </div>
   )
 }
