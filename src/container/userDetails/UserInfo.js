@@ -8,9 +8,13 @@ const UserInfo = () => {
 
 
   const [userData,setUserData]  = useState([]);
+ 
 
   useEffect(()=>{
+     
+    
              handleData();
+          
   },[])
 
 
@@ -25,6 +29,7 @@ const UserInfo = () => {
             console.log("error occurred in handle data in userInfo")
         })
     }
+  
   return (
 
 
@@ -32,9 +37,9 @@ const UserInfo = () => {
     <div className='flex-column'>
 
       {
-        userData.length <= 0 &&
+        userData.length <= 0 && 
 
-        <p> No User Data Yet</p>
+        <p className='no-user'> No User Data Yet</p>
         
       }
        
@@ -75,10 +80,13 @@ const UserInfo = () => {
        
         
 
-       
+      {
+
+        userData.length > 0 &&
        <button className="getDetails" onClick={handleData}>
              Get UserDetails
        </button>
+      } 
     </div>
   )
 }

@@ -52,3 +52,8 @@ button{
    
     text-align: center;
 }
+.no-user{
+    text-align: center;
+    padding-block:20px ;
+    font-size: xx-large;
+}
