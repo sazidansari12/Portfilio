@@ -86,7 +86,7 @@ position: sticky;
 
 
  .active{
-       background:#181818; 
+       background:white; 
        left: 0px;
        opacity: 1;
     }
